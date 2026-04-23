@@ -1,0 +1,49 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[portuguese]{babel}
+\usepackage{lmodern, titlesec, enumitem, microtype}
+\usepackage[left=1.2cm, right=1.2cm, top=1.0cm, bottom=1.0cm]{geometry}
+\usepackage[hidelinks]{hyperref}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\titleformat{\section}{\bfseries\large}{}{0pt}{\uppercase}
+\titlespacing{\section}{0pt}{8pt}{4pt}
+\newcommand{\sectionrule}{\vspace{-4pt}\hrule\vspace{5pt}}
+\newcommand{\resumeItem}[1]{\item \small #1}
+\newcommand{\resumeSubheading}[4]{\item \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r} \textbf{#1} & #3 \\ \textit{\small #2} & \textit{\small #4} \end{tabular*}\vspace{-6pt}}
+
+\begin{document}
+\begin{center}
+    {\Huge \textbf{Teste Teste}} \\[5pt]
+    \small Xique-Xique - BA $|$ \href{mailto:teste@teste.com}{teste@teste.com} $|$ (11)11111-1111 \\
+    \href{teste.com/teste}{LinkedIn} $|$ \href{teste.com/teste}{GitHub}
+\end{center}
+
+\section{Resumo Profissional} \sectionrule
+scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more
+
+\section{Experiência Profissional} \sectionrule
+\begin{itemize}[leftmargin=0pt, label={}]
+\resumeSubheading{Teste}{Teste}{2023 - Atual}{Xique-Xique}
+\begin{itemize}[leftmargin=12pt, label=\textbullet, itemsep=1pt, parsep=1pt]
+  \resumeItem{Contrary to popular belief, Lorem Ipsum.}
+  \resumeItem{making it over 2000 years old.}
+\end{itemize}
+
+\end{itemize}
+
+\section{Habilidades e Tecnologias} \sectionrule
+\begin{description}[leftmargin=0pt, font=\bfseries, itemsep=-2pt]
+\item[There are many:] variations of passages of \textbackslash textbf\{Lorem Ipsum\}
+\end{description}
+
+\section{Formação Acadêmica} \sectionrule
+\begin{itemize}[leftmargin=0pt, label={}]
+\resumeSubheading{Teste}{Teste}{2022}{}
+\end{itemize}
+
+\section{Idiomas} \sectionrule
+\textbf{Inglês: Fluente}
+\end{document}
