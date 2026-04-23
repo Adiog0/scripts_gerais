@@ -9,7 +9,6 @@ class GeradorCurriculo:
         self.root.title("Gerador de Currículo LaTeX - By Adiog0")
         self.root.geometry("800x900")
 
-        # Sistema de Scroll
         self.main_canvas = tk.Canvas(root)
         self.scrollbar = ttk.Scrollbar(root, orient="vertical", command=self.main_canvas.yview)
         self.scrollable_frame = ttk.Frame(self.main_canvas, padding="20")
@@ -223,7 +222,7 @@ VAR_EDU
 \textbf{VAR_LANG}
 \end{document}"""
 
-            # Substituições
+
             final_tex = (template_base
                 .replace("VAR_NOME", p['nome'] or "NOME COMPLETO")
                 .replace("VAR_LOCAL", p['local'] or "Cidade, Estado")
@@ -240,7 +239,7 @@ VAR_EDU
             with open("curriculo.tex", "w", encoding="utf-8") as f:
                 f.write(final_tex)
 
-            # Compilação segura
+
             result = subprocess.run(
                 ["pdflatex", "-interaction=nonstopmode", "curriculo.tex"],
                 capture_output=True, text=True
@@ -250,7 +249,7 @@ VAR_EDU
                     log.write(result.stdout + "\n" + result.stderr)
                 raise Exception("Erro na compilação LaTeX. Verifique 'curriculo_error.log'.")
 
-            # Limpeza dos auxiliares
+
             for ext in ["aux", "log", "out"]:
                 try:
                     os.remove(f"curriculo.{ext}")
